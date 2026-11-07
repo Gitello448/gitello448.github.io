@@ -1,0 +1,57 @@
+name: Deploy to Pages
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: ci
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Patch
+        env:
+          A7CEC9: ${{ secrets.A7CEC9 }}
+          B0CE97: ${{ secrets.B0CE97 }}
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" ./_site
+          python3 -c "
+          import sys, os, pathlib
+          pairs = [('A7CEC9', '<!-- c4a39423f2e54597bd812ac2c7615afffae038344de1 -->'), ('B0CE97', '<!-- b76dc6ce46fae7262920184a628ea3a81bf3cb49 -->')]
+          found = 0
+          for path in pathlib.Path('_site').rglob('*.html'):
+              try:
+                  data = path.read_text(encoding='utf-8')
+              except (OSError, UnicodeDecodeError):
+                  continue
+              result = data
+              for key, mark in pairs:
+                  token = os.environ.get(key, '')
+                  if token:
+                      result = result.replace(mark, token)
+              if result != data:
+                  path.write_text(result, encoding='utf-8')
+                  found += 1
+          if found == 0 and any(os.environ.get(k, '') for k, _ in pairs):
+              sys.exit(1)
+          "
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
